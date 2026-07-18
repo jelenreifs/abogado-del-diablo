@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El Abogado del Diablo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ===== Enrutado CSS: un radio por pantalla (oculto) ===== -->
+  <input type="radio" name="screen" id="r-landing" class="route" checked />
+  <input type="radio" name="screen" id="r-form" class="route" />
+  <input type="radio" name="screen" id="r-results" class="route" />
+  <input type="radio" name="screen" id="r-empty" class="route" />
+
+  <!-- =========================================================
+       PANTALLA 1 · LANDING
+       ========================================================= -->
+  <div class="screen screen-landing">
+    <nav class="nav"><div class="nav-inner">
+      <label class="nav-logo" for="r-landing"><span class="nav-logo-icon">⚖️</span>El Abogado del Diablo</label>
+      <div class="nav-links">
+        <label class="nav-link" for="r-landing">Inicio</label>
+        <span class="nav-link disabled">Historial</span>
+        <span class="nav-link disabled">Configuración</span>
+      </div>
+      <label class="nav-cta" for="r-form">Someter a juicio <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></label>
+    </div></nav>
+
+    <section class="hero">
+      <div class="hero-badge"><span class="hero-badge-dot"></span>IA para decisiones críticas</div>
+      <h1 class="hero-title">¿Y si alguien desmontara<br><span class="coral">tu idea</span> antes<br>de que fracase?</h1>
+      <p class="hero-sub">Analiza cualquier decisión desde una perspectiva crítica. Tu abogado del diablo personal impulsado por IA.</p>
+      <div class="hero-actions">
+        <label class="btn-primary" for="r-form">Someter una decisión a juicio <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></label>
+        <label class="btn-secondary" for="r-results">Ver ejemplo</label>
+      </div>
+      <div class="preview-wrap"><div class="preview-card">
+        <div class="preview-topbar">
+          <div class="preview-dots"><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-dot"></span></div>
+          <span class="preview-mono">veredicto · análisis en curso</span>
+        </div>
+        <div class="preview-body">
+          <div class="preview-tag">⚖️ Veredicto del Abogado</div>
+          <p class="preview-quote">"La premisa de mercado es sólida, pero ejecutar sin validación previa es el cargo más grave. El 73% de los fundadores que fracasan en B2B SaaS construyeron el producto equivocado para el cliente equivocado..."</p>
+          <div class="preview-footer">
+            <div class="preview-bars">
+              <div class="preview-bar-item" style="background:rgba(212,91,91,.8)"></div>
+              <div class="preview-bar-item" style="background:rgba(212,91,91,.35)"></div>
+              <div class="preview-bar-item" style="background:rgba(212,91,91,.35)"></div>
+            </div>
+            <span class="preview-note">3 cargos críticos identificados</span>
+          </div>
+        </div>
+      </div></div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="section-header">
+        <h2 class="section-title">Por qué tomamos malas decisiones</h2>
+        <p class="section-sub">Tres sesgos cognitivos que sabotean las decisiones más importantes</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-top"><div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-1.16Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-1.16Z"/></svg></div><span class="card-n">01</span></div>
+          <div class="card-title">Sesgo de confirmación</div>
+          <p class="card-desc">Solo buscamos información que respalde lo que ya creemos. Filtramos inconscientemente todo lo que contradice nuestra hipótesis.</p>
+        </div>
+        <div class="card">
+          <div class="card-top"><div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div><span class="card-n">02</span></div>
+          <div class="card-title">Puntos ciegos</div>
+          <p class="card-desc">No podemos ver lo que no sabemos que no sabemos. Los riesgos más peligrosos son los que nunca llegamos a imaginar.</p>
+        </div>
+        <div class="card">
+          <div class="card-top"><div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><span class="card-n">03</span></div>
+          <div class="card-title">Decisiones impulsivas</div>
+          <p class="card-desc">La urgencia y las emociones secuestran el razonamiento. Decidimos rápido para sentir que avanzamos, no para avanzar bien.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h2 class="section-title">Cómo funciona</h2>
+        <p class="section-sub">Tres pasos para transformar una intuición en una decisión fundamentada</p>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="step-circle">📝</div><div class="step-n">01</div><div class="step-title">Describe tu decisión</div><p class="step-desc">Explica la decisión con todo el contexto relevante: motivaciones, alternativas y dudas principales.</p></div>
+        <div class="step"><div class="step-circle">⚖️</div><div class="step-n">02</div><div class="step-title">La IA la cuestiona</div><p class="step-desc">El sistema analiza riesgos, sesgos y puntos ciegos desde una perspectiva adversarial estructurada.</p></div>
+        <div class="step"><div class="step-circle">🎯</div><div class="step-n">03</div><div class="step-title">Obtén un veredicto</div><p class="step-desc">Recibe un análisis DAFO completo y los cargos críticos que debes enfrentar antes de decidir.</p></div>
+      </div>
+    </section>
+
+    <section class="section section-alt2">
+      <div class="section-header">
+        <h2 class="section-title">Lo que obtienes</h2>
+        <p class="section-sub">Un tribunal de análisis disponible en cualquier momento</p>
+      </div>
+      <div class="grid-4">
+        <div class="bcard"><div class="bcard-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-1.16Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-1.16Z"/></svg></div><div class="bcard-title">Pensamiento crítico</div><p class="bcard-desc">Análisis adversarial que cuestiona tus supuestos y detecta falacias ocultas</p></div>
+        <div class="bcard"><div class="bcard-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="bcard-title">Riesgos ocultos</div><p class="bcard-desc">Identificación de amenazas que no habías llegado a considerar</p></div>
+        <div class="bcard"><div class="bcard-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div><div class="bcard-title">Decisiones más sólidas</div><p class="bcard-desc">Veredictos fundamentados en datos y razonamiento estructurado</p></div>
+        <div class="bcard"><div class="bcard-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="bcard-title">Disponible 24/7</div><p class="bcard-desc">Tu abogado del diablo siempre listo, sin juicios ni sesgos personales</p></div>
+      </div>
+    </section>
+
+    <section class="cta-banner">
+      <h2 class="cta-banner-title">¿Tienes una decisión pendiente?</h2>
+      <p class="cta-banner-sub">Sométela a juicio antes de comprometer tu tiempo, dinero o energía.</p>
+      <label class="btn-primary" for="r-form">Empezar ahora, es gratis <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></label>
+    </section>
+
+    <footer class="footer"><div class="footer-inner">
+      <div class="footer-logo">⚖️ El Abogado del Diablo</div>
+      <p class="footer-copy">© 2025 El Abogado del Diablo · Hecho para tomar mejores decisiones</p>
+      <div class="footer-links"><span class="footer-link">Privacidad</span><span class="footer-link">Términos</span><span class="footer-link">Contacto</span></div>
+    </div></footer>
+  </div>
+
+  <!-- =========================================================
+       PANTALLA 2 · NUEVA DECISIÓN
+       ========================================================= -->
+  <div class="screen screen-form">
+    <nav class="nav"><div class="nav-inner">
+      <label class="nav-logo" for="r-landing"><span class="nav-logo-icon">⚖️</span>El Abogado del Diablo</label>
+      <div class="nav-links">
+        <label class="nav-link" for="r-landing">Inicio</label>
+        <span class="nav-link disabled">Historial</span>
+        <span class="nav-link disabled">Configuración</span>
+      </div>
+    </div></nav>
+
+    <main class="form-main"><div class="form-inner">
+      <div class="breadcrumb">⚖️ <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg> <span>Nueva decisión</span></div>
+      <h1 class="form-title">Presenta tu caso</h1>
+      <p class="form-sub">Describe la decisión con el mayor contexto posible. Cuanto más detalles aportes, más preciso será el análisis.</p>
+      <div class="form-group">
+        <div>
+          <label class="form-label" for="dt">Tu decisión</label>
+          <textarea id="dt" class="form-textarea" rows="9" placeholder="Quiero lanzar una startup...&#10;Estoy pensando en cambiar de trabajo...&#10;Quiero invertir en..."></textarea>
+          <div class="form-meta">
+            <span class="form-hint" id="hint" style="display:none">Añade más contexto para un análisis más preciso</span>
+            <span class="form-counter" id="cnt">0 car.</span>
+          </div>
+        </div>
+        <div>
+          <label class="form-label">Tipo de decisión</label>
+          <div class="type-pills">
+            <input type="radio" name="dtype" id="t-negocio" class="type-input" checked />
+            <label class="type-pill" for="t-negocio">Negocio</label>
+            <input type="radio" name="dtype" id="t-carrera" class="type-input" />
+            <label class="type-pill" for="t-carrera">Carrera profesional</label>
+            <input type="radio" name="dtype" id="t-inversion" class="type-input" />
+            <label class="type-pill" for="t-inversion">Inversión</label>
+            <input type="radio" name="dtype" id="t-proyecto" class="type-input" />
+            <label class="type-pill" for="t-proyecto">Proyecto</label>
+            <input type="radio" name="dtype" id="t-personal" class="type-input" />
+            <label class="type-pill" for="t-personal">Personal</label>
+            <input type="radio" name="dtype" id="t-otro" class="type-input" />
+            <label class="type-pill" for="t-otro">Otro</label>
+          </div>
+        </div>
+        <div class="form-submit">
+          <button id="sbtn" type="button" class="btn-primary">Someter a juicio <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+        </div>
+        <p class="form-note">El análisis tarda aproximadamente 10 segundos</p>
+      </div>
+    </div></main>
+  </div>
+
+  <!-- =========================================================
+       PANTALLA 3 · RESULTADOS
+       ========================================================= -->
+  <div class="screen screen-results">
+    <nav class="nav"><div class="nav-inner">
+      <label class="nav-logo" for="r-landing"><span class="nav-logo-icon">⚖️</span>El Abogado del Diablo</label>
+      <div class="nav-links">
+        <label class="nav-link" for="r-landing">Inicio</label>
+        <span class="nav-link disabled">Historial</span>
+        <span class="nav-link disabled">Configuración</span>
+      </div>
+    </div></nav>
+
+    <main class="results-main"><div class="results-inner">
+      <div class="results-header" id="results-top">
+        <div class="breadcrumb">⚖️ <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg> <span>Resultados</span></div>
+        <h1 class="results-title" id="results-title">Quiero lanzar una startup de IA para gestión de equipos remotos</h1>
+        <div class="results-tags">
+          <span class="tag" id="results-type">Negocio</span>
+          <span class="tag tag-success"><span class="tag-dot"></span>Análisis completado</span>
+        </div>
+      </div>
+
+      <div class="swot-section">
+        <div class="swot-section-header"><span class="swot-section-label">Análisis DAFO</span><div class="swot-divider"></div></div>
+        <div class="swot-grid">
+          <div class="swot-card" style="background:rgba(16,185,129,.05);border:1px solid rgba(16,185,129,.2)">
+            <div class="swot-card-head"><div class="swot-symbol" style="background:rgba(16,185,129,.1);color:#059669">↑</div><span class="swot-card-label" style="color:#059669">Fortalezas</span></div>
+            <ul class="swot-items" id="swot-fortalezas"></ul>
+          </div>
+          <div class="swot-card" style="background:rgba(212,91,91,.05);border:1px solid rgba(212,91,91,.2)">
+            <div class="swot-card-head"><div class="swot-symbol" style="background:rgba(212,91,91,.1);color:#D45B5B">↓</div><span class="swot-card-label" style="color:#D45B5B">Debilidades</span></div>
+            <ul class="swot-items" id="swot-debilidades"></ul>
+          </div>
+          <div class="swot-card" style="background:rgba(59,130,246,.05);border:1px solid rgba(59,130,246,.2)">
+            <div class="swot-card-head"><div class="swot-symbol" style="background:rgba(59,130,246,.1);color:#2563EB">◇</div><span class="swot-card-label" style="color:#2563EB">Oportunidades</span></div>
+            <ul class="swot-items" id="swot-oportunidades"></ul>
+          </div>
+          <div class="swot-card" style="background:rgba(245,158,11,.05);border:1px solid rgba(245,158,11,.2)">
+            <div class="swot-card-head"><div class="swot-symbol" style="background:rgba(245,158,11,.1);color:#D97706">⚠</div><span class="swot-card-label" style="color:#D97706">Amenazas</span></div>
+            <ul class="swot-items" id="swot-amenazas"></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="verdict-card">
+        <div class="verdict-head">
+          <span class="verdict-icon">⚖️</span>
+          <div class="verdict-head-text"><h2>Veredicto del Abogado del Diablo</h2><p>Análisis adversarial basado en la información proporcionada</p></div>
+        </div>
+        <div class="section-label">Dictamen</div>
+        <p id="results-dictamen" class="verdict-footer-text">Cargando dictamen…</p>
+        <div class="section-label">Los cargos principales</div>
+        <div class="charges" id="verdict-cargos"></div>
+        <div class="risk-box">
+          <div class="risk-label">Riesgo principal</div>
+          <p class="risk-text" id="verdict-riesgo">Cargando…</p>
+        </div>
+        <div class="verdict-footer">
+          <div class="section-label" style="margin-bottom:8px">¿Seguirías adelante?</div>
+          <p class="verdict-footer-text" id="verdict-seguirias">Cargando…</p>
+        </div>
+      </div>
+
+      <div class="results-actions">
+        <label class="btn-primary" for="r-form"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg> Analizar otra decisión</label>
+        <a class="btn-ghost" href="#results-top"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg> Revisar análisis</a>
+      </div>
+
+      <div class="verdict-card" style="margin-top:20px">
+        <div class="section-label">Fragilidad</div>
+        <div class="risk-box" style="margin-bottom:0">
+          <div class="risk-label">Índice de fragilidad</div>
+          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+            <div style="flex:1;min-width:220px;height:10px;border-radius:999px;background:rgba(0,0,0,.08);overflow:hidden;">
+              <div id="fragility-meter" style="height:100%;width:0%;background:linear-gradient(90deg,#D45B5B,#F59E0B);transition:width .3s ease;"></div>
+            </div>
+            <span id="results-fragilidad-label" class="risk-text">0/100</span>
+          </div>
+              <p id="results-fragilidad" class="verdict-footer-text" style="margin-top:12px">—</p>
+              <div id="fragility-breakdown" class="fragility-breakdown" style="margin-top:12px"></div>
+        </div>
+      </div>
+    </div></main>
+  </div>
+
+  <!-- =========================================================
+       PANTALLA 4 · ESTADO VACÍO
+       ========================================================= -->
+  <div class="screen screen-empty">
+    <nav class="nav"><div class="nav-inner">
+      <label class="nav-logo" for="r-landing"><span class="nav-logo-icon">⚖️</span>El Abogado del Diablo</label>
+      <div class="nav-links">
+        <label class="nav-link" for="r-landing">Inicio</label>
+        <span class="nav-link disabled">Historial</span>
+        <span class="nav-link disabled">Configuración</span>
+      </div>
+    </div></nav>
+
+    <main class="empty-main"><div class="empty-inner">
+      <div class="empty-art"><div class="empty-ring">⚖️</div><span class="empty-dot1"></span><span class="empty-dot2"></span></div>
+      <h2 class="empty-title">Todavía no has sometido ninguna decisión a juicio.</h2>
+      <p class="empty-sub">Cada decisión importante merece un análisis crítico antes de ejecutarse. Empieza ahora, es gratis.</p>
+      <label class="btn-primary" for="r-form"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg> Crear primer análisis</label>
+    </div></main>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/prompt.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+</html>

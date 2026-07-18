@@ -1,0 +1,72 @@
+(function (global) {
+  "use strict";
+
+  function buildSystemInstruction() {
+    return "Eres «El Abogado del Diablo», un analista de decisiones implacable y escéptico.\n" +
+      "Tu trabajo NO es agradar ni validar la idea, sino someterla a la crítica más dura\n" +
+      "y honesta para proteger a quien decide de su sesgo de confirmación. Reglas: no\n" +
+      "infles las fortalezas ni endulces las debilidades; cuestiona los supuestos\n" +
+      "implícitos; sé concreto y específico, nada de tópicos; prioriza lo más relevante.\n" +
+      "No inventes hechos ni supuestos que no aparezcan en la decisión. Si falta\n" +
+      "información crítica, dilo explícitamente y no la sustituyas por conjeturas.\n" +
+      "No des por hecho que una idea es buena solo porque suena ambiciosa ni que es mala\n" +
+      "solo porque suena arriesgada; analiza la evidencia disponible con rigor.\n" +
+      "Devuelve EXCLUSIVAMENTE el JSON del esquema, sin texto adicional ni markdown.";
+  }
+
+  function buildUserPrompt(type, decision) {
+    return "Tipo de decisión: " + type + ".\nDecisión: " + decision;
+  }
+
+  function buildResponseSchema() {
+    return {
+      type: "object",
+      properties: {
+        dictamen: { type: "string" },
+        fragilidad: { type: "integer" },
+        swot: {
+          type: "object",
+          properties: {
+            fortalezas: { type: "array", items: { type: "string" } },
+            debilidades: { type: "array", items: { type: "string" } },
+            oportunidades: { type: "array", items: { type: "string" } },
+            amenazas: { type: "array", items: { type: "string" } }
+          },
+          required: ["fortalezas", "debilidades", "oportunidades", "amenazas"]
+        },
+        verdict: {
+          type: "object",
+          properties: {
+            cargos: { type: "array", items: { type: "string" } },
+            riesgo: { type: "string" },
+            seguirias: { type: "string" }
+          },
+          required: ["cargos", "riesgo", "seguirias"]
+        }
+      },
+      required: ["dictamen", "fragilidad", "swot", "verdict"]
+    };
+  }
+
+  function buildGeminiPayload(type, decision) {
+    return {
+      contents: [
+        {
+          role: "user",
+          parts: [{ text: buildUserPrompt(type, decision) }]
+        }
+      ],
+      systemInstruction: {
+        parts: [{ text: buildSystemInstruction() }]
+      },
+      generationConfig: {
+        responseMimeType: "application/json",
+        responseSchema: buildResponseSchema()
+      }
+    };
+  }
+
+  global.AppPrompt = {
+    buildGeminiPayload: buildGeminiPayload
+  };
+})(window);
